@@ -13,6 +13,7 @@ namespace Liip\FunctionalTestBundle\Tests\Test;
 
 /* Used by annotations */
 use Liip\FunctionalTestBundle\Test\Html5WebTestCase;
+use PHPUnit\Framework\AssertionFailedError;
 
 /**
  * Test Html5WebTestCase class with mocked methods instead of inheriting from
@@ -24,7 +25,7 @@ use Liip\FunctionalTestBundle\Test\Html5WebTestCase;
  *
  * @see https://github.com/sebastianbergmann/phpunit/blob/b12b9c37e382c096b93c3f26e7395775f59a5eea/tests/Framework/AssertTest.php#L3560-L3574
  */
-class Html5WebTestCaseMockTest extends \PHPUnit_Framework_TestCase
+class Html5WebTestCaseMockTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @param array $methods
@@ -135,7 +136,7 @@ EOF;
 
         try {
             $mock->assertIsValidHtml5('baz');
-        } catch (\PHPUnit_Framework_AssertionFailedError $e) {
+        } catch (AssertionFailedError $e) {
             $this->assertSame($string, $e->getMessage());
 
             return;
@@ -191,7 +192,7 @@ EOF;
 
         try {
             $mock->assertIsValidHtml5('', 'baz');
-        } catch (\PHPUnit_Framework_AssertionFailedError $e) {
+        } catch (\PHPUnit\Framework\AssertionFailedError $e) {
             $this->assertSame($string, $e->getMessage());
 
             return;
@@ -276,7 +277,7 @@ EOF;
     }
 
     /**
-     * @expectedException \PHPUnit_Framework_AssertionFailedError
+     * @expectedException \PHPUnit\Framework\AssertionFailedError
      */
     public function testAssertIsValidHtml5SnippetFail()
     {

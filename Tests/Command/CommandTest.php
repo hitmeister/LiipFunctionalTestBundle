@@ -191,7 +191,7 @@ class CommandTest extends WebTestCase
     {
         $this->setVerbosityLevel('foobar');
 
-        $this->setExpectedException(
+        $this->expectException(
             'OutOfBoundsException'
         );
 
