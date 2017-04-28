@@ -20,7 +20,7 @@ use Liip\FunctionalTestBundle\DependencyInjection\Compiler\SetTestClientPass;
  *
  * @see https://github.com/sebastianbergmann/phpunit/blob/b12b9c37e382c096b93c3f26e7395775f59a5eea/tests/Framework/AssertTest.php#L3560-L3574
  */
-class SetTestClientPassMockTest extends \PHPUnit_Framework_TestCase
+class SetTestClientPassMockTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Simulate Symfony 2.8.

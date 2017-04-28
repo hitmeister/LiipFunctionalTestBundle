@@ -17,7 +17,7 @@ use Symfony\Component\DomCrawler\Crawler;
 use Symfony\Component\HttpFoundation\Response;
 use Liip\FunctionalTestBundle\Test\ValidationErrorsConstraint;
 
-class HttpAssertions extends \PHPUnit_Framework_TestCase
+class HttpAssertions extends \PHPUnit\Framework\TestCase
 {
     /**
      * Checks the success state of a response.
